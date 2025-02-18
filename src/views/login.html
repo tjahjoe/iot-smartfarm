@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Login</title>
+    <link rel="stylesheet" href="../styles/output.css">
+</head>
+
+<body class="w-full h-screen bg-green-50 flex justify-center items-center">
+    <div class="w-full max-w-sm bg-white p-8 rounded-xl shadow-xl border border-brown-300">
+        <h2 class="text-2xl text-center text-brown-600 font-bold mb-8">Farm Login</h2>
+        <form id="login" method="post" class="space-y-6">
+            <div>
+                <label for="username" class="block text-lg font-medium text-brown-600">Username</label>
+                <input type="text" name="username" id="username" class="w-full p-3 border border-brown-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+            </div>
+            <div>
+                <label for="password" class="block text-lg font-medium text-brown-600">Password</label>
+                <input type="password" name="password" id="password" class="w-full p-3 border border-brown-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required>
+            </div>
+
+            <div>
+                <button type="button" id="toggle" class="text-green-500 hover:underline">Show Password</button>
+            </div>
+
+            <div>
+                <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="../scripts/sendRequest.js"></script>
+    <script src="../scripts/login.js"></script>
+</body>
+
+</html>

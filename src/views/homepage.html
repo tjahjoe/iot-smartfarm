@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Acres Farm</title>
+    <link rel="stylesheet" href="../styles/output.css">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 50;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-900">
+
+    <nav class="bg-green-700 text-white shadow-lg fixed w-full top-0 left-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
+            <h1 class="text-3xl font-semibold">Green Acres</h1>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="hover:text-yellow-400 transition duration-300">Home</a></li>
+                <li><a href="#features" class="hover:text-yellow-400 transition duration-300">Features</a></li>
+                <li><a href="#about" class="hover:text-yellow-400 transition duration-300">About</a></li>
+                <li><a href="#contact" class="hover:text-yellow-400 transition duration-300">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="relative w-full h-screen bg-cover bg-center">
+        <div class="absolute inset-0 bg-green-100"></div>
+        <div class="absolute inset-0 flex items-center justify-center text-center text-white px-6">
+            <div>
+                <h1 class="text-5xl text-green-800 font-bold mb-6">Welcome to Green Acres Farm</h1>
+                <p class="text-lg text-green-800 mb-6">Sustainably grown produce for a better tomorrow.</p>
+                <a href="#about"
+                    class="bg-yellow-500 text-green-800 py-3 px-8 rounded-full text-xl hover:bg-yellow-600 transition duration-300">Learn
+                    More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="py-16 px-6 bg-green-100">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-semibold text-green-800 mb-12">Our Key Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Soil Health</h2>
+                    <h3 id="soil" class="text-2xl font-bold text-brown-600 mt-19 mb-19">-</h3>
+                    <p class="text-lg text-gray-700">We monitor soil parameters for optimal growth conditions, ensuring
+                        the best produce every time.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">pH Soil</h2>
+                    <h3 id="ph" class="text-2xl font-bold text-brown-600 mt-19 mb-19">-</h3>
+                    <p class="text-lg text-gray-700">We monitor the soil's pH value to ensure optimal growing conditions for our crops. 
+                        A balanced pH ensures healthy plant growth and maximum yield.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-2xl font-semibold text-green-700 mb-4">Live Stream</h2>
+                    <img id="stream" alt="Live Stream" class="w-full h-38 object-cover rounded-lg mb-4 cursor-pointer">
+                    <p class="text-lg text-gray-700">Catch live updates on our farm with our streaming service. See the
+                        farm in action in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="about" class="py-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h2 class="text-4xl font-semibold text-green-800 mb-8">About Green Acres</h2>
+            <p class="text-xl text-gray-700 mb-6">At Green Acres, we focus on sustainable farming practices, providing
+                fresh and organic produce directly to our customers. Our goal is to make healthy eating accessible while
+                maintaining the health of our land.</p>
+            <a href="#contact"
+                class="bg-yellow-500 text-green-800 py-3 px-8 rounded-full text-xl hover:bg-yellow-600 transition duration-300">Contact
+                Us</a>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-green-700 text-white py-6">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <p>&copy; 2025 Green Acres Farm. All Rights Reserved.</p>
+            <ul class="flex space-x-6">
+                <li><a href="#" class="hover:text-yellow-400">Facebook</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Instagram</a></li>
+                <li><a href="#" class="hover:text-yellow-400">Twitter</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <div id="imageModal" class="modal">
+        <img id="modalImage" src="" alt="Enlarged Image">
+    </div>
+
+    <script src="../scripts/streaming.js"></script>
+    <script src="../scripts/sendRequest.js"></script>
+    <script src="../scripts/phSoil.js"></script>
+</body>
+
+</html>
